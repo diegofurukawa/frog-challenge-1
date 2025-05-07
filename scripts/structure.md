@@ -52,30 +52,3 @@ src/
         ├── company.repository.ts
         └── employee.repository.ts
 ```
-
-## Arquivos que precisam ser criados ou modificados
-
-Para implementar o endpoint `/company/:id/employees`, você precisa criar ou modificar os seguintes arquivos:
-
-### Novos arquivos:
-
-1. **src/usecases/employee/get-by-company-id.employee.usecase.ts**
-   - Implementa o caso de uso para obter funcionários de uma empresa específica
-
-### Arquivos a modificar:
-
-1. **src/app.tokens.ts**
-   - Adicionar o token `GetEmployeesByCompanyIdUseCaseToken`
-
-2. **src/controllers/company.controller.ts**
-   - Adicionar o endpoint `GET /company/:id/employees`
-   - Injetar o use case `GetEmployeesByCompanyIdUseCase`
-
-3. **src/domain/interfaces/repositories/employee.repository.interface.ts**
-   - Adicionar o método `findByCompanyId`
-
-4. **src/external/repository/employee.repository.ts**
-   - Implementar o método `findByCompanyId`
-
-5. **src/app.module.ts**
-   - Registrar o novo use case como provider

@@ -2,8 +2,8 @@
 # Com todos os arquivos em uma única pasta (estrutura plana)
 
 # Diretorios fixos
-$SOURCE_DIR = "D:\GitHub\FrogChallenge\frog-challenge-1"
-$DEST_DIR = "D:\GitHub\BKPs\FrogChallenge\frog-challenge-1"
+$SOURCE_DIR = "D:\GitHub\FrogChallenge\frog-challenge"
+$DEST_DIR = "D:\GitHub\BKPs\FrogChallenge\frog-challenge"
 
 # Verifica se o diretorio fonte existe
 if (-not (Test-Path $SOURCE_DIR)) {
