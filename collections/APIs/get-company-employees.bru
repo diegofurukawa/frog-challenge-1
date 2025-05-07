@@ -1,0 +1,23 @@
+meta {
+  name: get/company/employees
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:3000/company/1/employees
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Maria Oliveira",
+    "email": "maria.oliveira@empresa.com",
+    "phone": "11987654322",
+    "birthdate": "1995-03-10",
+    "city": "São Paulo",
+    "state": "SP",
+    "companyId": 1
+  }
+}
